@@ -1,4 +1,4 @@
-import tensorflow.contrib.slim as slim
+import tf_slim as slim
 from .baseop import BaseOp
 import tensorflow as tf
 from distutils.version import StrictVersion
@@ -22,7 +22,7 @@ class route(BaseOp):
 
 class connected(BaseOp):
 	def forward(self):
-		self.out = tf.nn.xw_plus_b(
+		self.out = tf.compat.v1.nn.xw_plus_b(
 			self.inp.out,
 			self.lay.w['weights'], 
 			self.lay.w['biases'], 

@@ -2,6 +2,7 @@ import os
 import time
 import numpy as np
 import tensorflow as tf
+tf.compat.v1.disable_eager_execution()
 import pickle
 from multiprocessing.pool import ThreadPool
 
